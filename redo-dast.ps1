@@ -6,7 +6,7 @@
 #var sscUrl = tl.getInput('sscUrl', false);
 #var sscCiToken = tl.getInput('sscCiToken', false);
 
-$response = Invoke-WebRequest -Uri 'localhost:5500/redo-dast/task.json' -UseBasicParsing
+$response = Invoke-WebRequest -Uri 'https://official-joke-api.appspot.com/random_joke' -UseBasicParsing
 
 $users = $response | ConvertFrom-Json
 
